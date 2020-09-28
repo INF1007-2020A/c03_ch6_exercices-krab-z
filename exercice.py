@@ -1,24 +1,38 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#Écrire un programme qui vérifie sur une liste contient des doublons, c’est-à-dire si la liste ne contient que des éléments uniques.
+#Écrire un programme qui calcule la moyenne des notes rentrées dans un dictionnaire ayant pour clés le nom des étudiants. Par la suite, le programme doit retourner le nom de l’étudiant ayant la meilleure note, dans la même structure de données.
+#À partir d’une phrase donnée par l’utilisateur, écrire un programme qui construit et affiche l’histogramme de cette phrase. Par la suite, afficher toutes les lettres qui sont utilisées plus de 5 fois dans la phrase, en ordre décroissant d’utilisation (le plus fréquent en premier).
+#Écrire un programme qui permet de sauvegarder les ingrédients nécessaires à plusieurs recettes, dans une seule structure de données. Par la suite, écrire un programme qui affiche les ingrédients d’une recette, en vérifiant au préalable si cette recette est dans notre livre de recettes.
 
 
 def order(values: list = None) -> bool:
-    if values is None:
-        # TODO: Demander les valeurs ici
-        pass
-
-    return False
+  liste=[]
+  while len(liste)<10 :
+    liste.append(int(input("Entrer les valeurs :")))
+  if liste==sorted(liste) :
+    print("Ordonnée")
+  else:
+    print("Désordonnée")
+  return False
 
 
 def anagrams(words: list = None) -> bool:
-    if words is None:
-        # TODO: Demander les mots ici
-        pass
-
-    return False
+  mot1=['A', 'L', 'E', 'V', 'I', 'N']
+  mot2=['N','I', 'V', 'E', 'L', 'A']
+  if sorted(mot1)==sorted(mot2):
+    print("Ce sont des annagrammes")
+  else :
+    print("Ce ne sont pas des annagrammes")
+  return False
 
 
 def contains_doubles(items: list) -> bool:
+  for i in range(0,len(list)):
+    if list[i]==list[i+1]:
+      print("La liste contient des doublons")
+      i=+1
+    else :
+      print("Aucun doublon")
+      break
     return False
 
 
