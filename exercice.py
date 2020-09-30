@@ -45,7 +45,12 @@ def histogram(sentence: str) -> tuple:
     # TODO: Créer l'histogramme a l'aide d'un dictionnaire
     #       Afficher l'histogramme et les lettres les plus fréquentes
     #       Retourner l'histogramme et le tableau de lettres
-
+    phrase='Bonjour, je m\'appelle Benjamin et je suis votre enseignant.'
+    phrase_set=set(phrase)
+    resultat={}
+    for lettre in phrase_set:
+      resultat[lettre] = phrase.count(lettre)
+    print(resultat)
     return {}, []
 
 
